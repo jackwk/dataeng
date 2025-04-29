@@ -1,5 +1,6 @@
 # Yum update
 sudo yum update -y
+sudo yum install git -y
 
 # Create a virtual environment
 python3 -m venv dbt_duckdb
@@ -24,17 +25,23 @@ chmod +x duckdb
 sudo mv duckdb /usr/local/bin/
 
 # Install plugins for duckdb
-duckdb
+dbt init dataeng
+
+duckdb dataeng.duckdb
 INSTALL aws;
 LOAD aws;
-CALL load_aws_credentials();
 INSTALL httpfs;
 LOAD httpfs;
+
+# Configure dbt profile, models, sources
+models/staging/stg_cities.sql
+models/sources/sources.yml
+dbt_project.yml
 
 # Check if it's working
 SELECT * FROM read_csv_auto('s3://dataeng-duckdb-dbt/worldcities.csv', AUTO_DETECT=TRUE) LIMIT 5;
 
-
+# other stuff
 # Start UI from shell
 duckdb -ui
 
@@ -42,10 +49,4 @@ duckdb -ui
 CALL start_ui();
 
 # Next steps
-# Create dbt project
-dbt init my_test_project
-cd my_json_project
-
-# Configure dbt profile
-
 
