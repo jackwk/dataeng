@@ -1,0 +1,54 @@
+version: 2
+
+models:
+  - name: worldcities
+    description: "World cities dataset loaded from CSV"
+    columns:
+      - name: id
+        description: "Unique identifier for each city"
+        tests:
+          - not_null
+          - unique
+
+      - name: city
+        description: "City name"
+        tests:
+          - not_null
+
+      - name: country
+        description: "Country name"
+        tests:
+          - not_null
+
+      - name: iso2
+        description: "2-letter country code"
+        tests:
+          - not_null
+          # Optionally, add accepted_values if you have a list of valid codes
+          # - accepted_values:
+          #     values: ['JP', 'ID', ...]  # Add all valid codes here
+
+      - name: iso3
+        description: "3-letter country code"
+        tests:
+          - not_null
+
+      - name: capital
+        description: "Capital type (primary/admin/...)"
+        tests:
+          - not_null
+
+      - name: population
+        description: "Population of the city"
+        tests:
+          - not_null
+
+      - name: latitude
+        description: "Latitude of the city"
+        tests:
+          - not_null
+
+      - name: longitude
+        description: "Longitude of the city"
+        tests:
+          - not_null
