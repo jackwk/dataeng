@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: worldcities
+  - name: stg_cities
     description: "World cities dataset loaded from CSV"
     columns:
       - name: id
