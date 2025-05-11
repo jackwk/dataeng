@@ -2,7 +2,7 @@ dataeng:
   outputs:
     default:
       type: duckdb
-      path: /path/to/your/duckdb/file
+      path: /home/ec2-user/dataeng/dataeng.duckdb
       extensions:
         - httpfs
         - aws
