@@ -26,9 +26,5 @@ duckdb -ui
 # Start UI from duckdb
 CALL start_ui();
 
-# Next steps
-add dbt tests
-add dbt docs
-
 # Run single dbt model
 dbt run --models marts.dim_cities
