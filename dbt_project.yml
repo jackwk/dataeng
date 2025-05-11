@@ -29,5 +29,10 @@ clean-targets:         # directories to be removed by `dbt clean`
 
 models:
   dataeng:
-    +pre-hook: "CREATE OR REPLACE SECRET s3_secret (TYPE S3, PROVIDER credential_chain);"
+    +pre-hook: 
+      - "INSTALL httpfs;"
+      - "LOAD httpfs;"
+      - "INSTALL aws;"
+      - "LOAD aws;"
+      - "CREATE OR REPLACE SECRET s3_secret (TYPE S3, PROVIDER credential_chain);"
     +materialized: table
