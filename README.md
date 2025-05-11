@@ -16,6 +16,8 @@ dbt_project.yml
 
 # Check if it's working
 SELECT * FROM read_csv_auto('s3://dataeng-duckdb-dbt/worldcities.csv', AUTO_DETECT=TRUE) LIMIT 5;
+duckdb dataeng.duckdb -c "select * from stg_cities;"
+duckdb dataeng.duckdb -c "select distinct(iso2) from stg_cities;"
 
 # other stuff
 # Start UI from shell
@@ -25,6 +27,8 @@ duckdb -ui
 CALL start_ui();
 
 # Next steps
+add dbt tests
+add dbt docs
 
 # Run single dbt model
 dbt run --models marts.dim_cities
