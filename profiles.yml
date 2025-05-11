@@ -1,4 +1,4 @@
-default:
+dataeng:
   outputs:
     dev:
       type: duckdb
