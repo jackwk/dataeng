@@ -1,0 +1,81 @@
+version: 2
+
+models:
+  - name: fct_education_affordability
+    description: "A comprehensive view of education costs combined with city demographics to help students make informed decisions about international education opportunities."
+    columns:
+      - name: country
+        description: "Country where the university is located"
+      - name: city
+        description: "City where the university is located"
+      - name: university
+        description: "Name of the university"
+      - name: program
+        description: "Academic program offered"
+      - name: level
+        description: "Education level (e.g., Master)"
+      - name: duration_years
+        description: "Duration of the program in years"
+        data_type: numeric
+      - name: city_population
+        description: "Population of the city"
+        data_type: numeric
+      - name: city_size
+        description: "Classification of city size (Megacity, Large City, Medium City, Small City)"
+      - name: latitude
+        description: "Geographical latitude of the city"
+        data_type: numeric
+      - name: longitude
+        description: "Geographical longitude of the city"
+        data_type: numeric
+      - name: country_population
+        description: "Total population of the country"
+        data_type: numeric
+      - name: city_count
+        description: "Number of cities in the country"
+        data_type: numeric
+      - name: tuition_usd
+        description: "Annual tuition cost in USD"
+        data_type: numeric
+      - name: rent_usd
+        description: "Monthly rent cost in USD"
+        data_type: numeric
+      - name: living_cost_index
+        description: "Index representing the cost of living"
+        data_type: numeric
+      - name: visa_fee_usd
+        description: "Visa application fee in USD"
+        data_type: numeric
+      - name: insurance_usd
+        description: "Annual insurance cost in USD"
+        data_type: numeric
+      - name: total_tuition_cost
+        description: "Total tuition cost for the entire program duration"
+        data_type: numeric
+      - name: total_rent_cost
+        description: "Total rent cost for the entire program duration"
+        data_type: numeric
+      - name: total_insurance_cost
+        description: "Total insurance cost for the entire program duration"
+        data_type: numeric
+      - name: total_visa_cost
+        description: "Total visa cost"
+        data_type: numeric
+      - name: total_program_cost
+        description: "Total cost of the entire program including tuition, rent, insurance, and visa fees"
+        data_type: numeric
+      - name: annual_cost
+        description: "Average annual cost of the program"
+        data_type: numeric
+      - name: affordability_index
+        description: "Index representing the affordability of education (lower is more affordable)"
+        data_type: numeric
+      - name: value_rating
+        description: "Rating representing the value of education (higher is better value)"
+        data_type: numeric
+      - name: tuition_local_currency
+        description: "Tuition cost in local currency"
+        data_type: numeric
+      - name: cost_to_population_ratio
+        description: "Ratio of cost to city population (lower is better)"
+        data_type: numeric
