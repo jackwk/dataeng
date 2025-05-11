@@ -1,0 +1,12 @@
+default:
+  outputs:
+    dev:
+      type: duckdb
+      path: /path/to/your/duckdb/file
+      extensions:
+        - httpfs
+        - aws
+      secrets:
+        - type: s3
+          provider: credential_chain
+      target: dev
