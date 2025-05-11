@@ -6,6 +6,7 @@ sources:
       - name: cities
         config:
           external_location: "s3://dataeng-duckdb-dbt/worldcities.csv"
+          
       - name: international_education_costs
         config:
           external_location: "s3://dataeng-duckdb-dbt/International_Education_Costs.csv"
