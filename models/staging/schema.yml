@@ -51,3 +51,38 @@ models:
         description: "Longitude of the city"
         tests:
           - not_null
+          
+  - name: stg_education_costs
+    description: "Staged international education costs data"
+    columns:
+      - name: country
+        description: "Country where the university is located"
+      - name: city
+        description: "City where the university is located"
+      - name: university
+        description: "Name of the university"
+      - name: program
+        description: "Academic program offered"
+      - name: level
+        description: "Education level (e.g., Master)"
+      - name: duration_years
+        description: "Duration of the program in years"
+        data_type: numeric
+      - name: tuition_usd
+        description: "Annual tuition cost in USD"
+        data_type: numeric
+      - name: living_cost_index
+        description: "Index representing the cost of living"
+        data_type: numeric
+      - name: rent_usd
+        description: "Monthly rent cost in USD"
+        data_type: numeric
+      - name: visa_fee_usd
+        description: "Visa application fee in USD"
+        data_type: numeric
+      - name: insurance_usd
+        description: "Annual insurance cost in USD"
+        data_type: numeric
+      - name: exchange_rate
+        description: "Exchange rate relative to USD"
+        data_type: numeric
