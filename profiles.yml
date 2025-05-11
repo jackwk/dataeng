@@ -1,6 +1,6 @@
 dataeng:
   outputs:
-    dev:
+    default:
       type: duckdb
       path: /path/to/your/duckdb/file
       extensions:
@@ -9,4 +9,4 @@ dataeng:
       secrets:
         - type: s3
           provider: credential_chain
-      target: dev
+      target: default
