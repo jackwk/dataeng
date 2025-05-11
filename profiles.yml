@@ -1,6 +1,6 @@
 dataeng:
   outputs:
-    default:
+    dev:
       type: duckdb
       path: /home/ec2-user/dataeng/dataeng.duckdb
       extensions:
@@ -9,4 +9,4 @@ dataeng:
       secrets:
         - type: s3
           provider: credential_chain
-      target: default
+      target: dev
