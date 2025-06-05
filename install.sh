@@ -1,7 +1,8 @@
 #!/bin/bash
 # Yum update + git
 sudo yum update -y
-sudo yum install git -y
+sudo yum groupinstall "Development Tools" -y
+sudo yum install python3-devel -y
 
 # Virtual environment
 python3 -m venv dbt_duckdb
